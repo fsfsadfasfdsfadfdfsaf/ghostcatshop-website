@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghostcat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            z-index: -1;
+        }
+        .smoke {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('smoke.png');
+            background-size: cover;
+            opacity: 0.2;
+            animation: smokeAnimation 10s infinite alternate;
+        }
+        @keyframes smokeAnimation {
+            0% { transform: translateY(0px); opacity: 0.3; }
+            100% { transform: translateY(-50px); opacity: 0.1; }
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #111;
+        }
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+            font-family: 'Black Ops One', cursive;
+        }
+        .hero {
+            margin-top: 50px;
+            font-size: 50px;
+            font-family: 'Black Ops One', cursive;
+            color: red;
+        }
+        .box {
+            margin: 20px auto;
+            padding: 20px;
+            width: 50%;
+            background: black;
+            border: 2px solid red;
+            box-shadow: 0 0 15px red;
+        }
+        .learn-more {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: red;
+            color: black;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .gray-background {
+            width: 100%;
+            background-color: #222 !important;
+            padding-top: 50px;
+            padding-bottom: 100px;
+            opacity: 1 !important;
+            position: relative;
+            z-index: 1;
+        }
+        .disclaimer {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px;
+            background: black;
+            border: 2px solid red;
+            box-shadow: 0 0 10px red;
+            font-size: 14px;
+            text-align: left;
+        }
+        .products-section {
+            margin: auto;
+            max-width: 1200px;
+        }
+        .products-section h2 {
+            color: red;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .products-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-card {
+            width: 300px;
+            background-color: black !important;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 0 10px red;
+        }
+        .product-card img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-info h3 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .product-info p {
+            font-size: 14px;
+            color: #bbb;
+        }
+        .product-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: red;
+            color: black;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .product-button:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="smoke"></div>
+    <div class="navbar">
+        <div class="logo">Ghostcat</div>
+    </div>
+    <div class="hero">Ghostcat</div>
+    <div class="box">
+        <p>Ghostcat è un progetto multifunzionale che unisce vari strumenti e software progettati per soddisfare le esigenze di sviluppo, cybersecurity e automazione.</p>
+        <button class="learn-more" onclick="window.location.href='#prodotti'">Learn More ▼</button>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="gray-background">
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> Ghostcat è un progetto che fornisce strumenti per la sicurezza informatica e l'automazione. <br>
+            L'uso improprio di questi strumenti per scopi illegali è severamente vietato. <br>
+            RedTiger e i suoi sviluppatori non sono responsabili di eventuali danni derivanti dall'uso inappropriato dei software. <br>
+            Si prega di utilizzarli in conformità con le leggi vigenti.
+        </div>
+
+        <div class="products-section" id="prodotti">
+            <h2>Explore Our Products</h2>
+            <div class="products-container">
+                <div class="product-card">
+                    <img src="prodotto1.jpg" alt="Multi-Tools">
+                    <div class="product-info">
+                        <h3>Multi-Tools</h3>
+                        <p>Ghostcat-Tools is a free multi-tool with features for Cybersecurity, OSINT, and Network Scanning.</p>
+                    </div>
+                    <button class="product-button" onclick="window.open('https://discord.gg/J8RYtRRC', '_blank')">View Product</button>
+                </div>
+                <div class="product-card">
+                    <img src="prodotto2.jpg" alt="Anonymization Software">
+                    <div class="product-info">
+                        <h3>phone lookup Software</h3>
+                        <p>This tool allows you to locate phone numbers around the world and a very simple tool No external apps needed.</p>
+                    </div>
+                    <button class="product-button" onclick="window.open('https://discord.gg/J8RYtRRC', '_blank')">View Product</button>
+                </div>
+                <div class="product-card">
+                    <img src="prodotto3.jpg" alt="Premium Multi-Tools">
+                    <div class="product-info">
+                        <h3>Premium Multi-Tools</h3>
+                        <p>The premium version offers advanced tools such as Python Obfuscator and RAT Discord.</p>
+                    </div>
+                    <button class="product-button" onclick="window.open('https://discord.gg/J8RYtRRC', '_blank')">View Product</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
